@@ -6,10 +6,11 @@ import json
 
 
 class Deployer(object):
-    def __init__(self, resource_group, subscription_id, azure_client_id, azure_client_secret, azure_tenant_id, container_name):
+    def __init__(self, resource_group, subscription_id, azure_client_id, azure_client_secret, azure_tenant_id, container_name, resource_group_location):
         self.subscription_id = subscription_id
         self.resource_group = resource_group
         self.container_name = container_name
+        self.resource_group_location = resource_group_location
         self.credentials = ServicePrincipalCredentials(
             client_id=azure_client_id,
             secret=azure_client_secret,
@@ -22,7 +23,7 @@ class Deployer(object):
             self.client.resource_groups.create_or_update(
                 self.resource_group,
                 {
-                    'location': 'centralus'
+                    'location': self.resource_group_location
                 }
             )
             arm.replace('\\', '/')
