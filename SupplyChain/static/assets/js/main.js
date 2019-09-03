@@ -136,11 +136,11 @@ var app = new Vue({
         }
         oReq.open(
           'post',
-            'post', '/storage_verify',
+             '/storage_verify',
           true
         )
         oReq.setRequestHeader('Content-Type', 'application/json')
-        oReq.send(JSON.stringify(this.userInput))
+        oReq.send(JSON.stringify({"sections": this.userInput.sections, "columnName":"StorageAccountName"}))
 			} else if (fieldName === 'ResourceGroupName' && value.length > 0) {
 				console.log('blur evt fired')
         var oReq = new XMLHttpRequest()
@@ -165,7 +165,7 @@ var app = new Vue({
           true
         )
         oReq.setRequestHeader('Content-Type', 'application/json')
-        oReq.send(JSON.stringify(this.userInput))
+        oReq.send(JSON.stringify({"sections": this.userInput.sections, "columnName":"ResourceGroupName"}))
 			}
     },
 
