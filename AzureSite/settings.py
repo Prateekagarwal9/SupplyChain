@@ -63,7 +63,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'AzureSite.urls'
 STATIC_URL = '/supplychain/static/'
-STATIC_ROOT = '/static/'
+STATIC_ROOT = '/'
 MEDIA_URL = '/supplychain/assests/'
 MEDIA_ROOT = '/images/'
 
