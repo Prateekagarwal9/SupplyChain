@@ -1,3 +1,7 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,11 +16,11 @@
 		<link rel="stylesheet" href="./assets/css/main.css" />
 		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
 		{% load staticfiles %}
-        <link rel="stylesheet" href="./assests/css/toolkit-light.css" />
-        <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
-		<link rel="stylesheet" href="./assets/css/main.css" />
+        <link rel="stylesheet" href="{% static '/assests/css/toolkit-light.css' %}" />
+        <link rel="stylesheet" href={% static '/assets/css/bootstrap.min.css' %}" />
+		<link rel="stylesheet" href={% static 'assets/css/main.css' %}" />
 
-        <script src="./assets/js/vue.min.js"></script>
+        <script src={% static '/assets/js/vue.min.js' %}"></script>
 
 	</head>
 
@@ -26,7 +30,7 @@
 				<div class="row w-100">
 					<div class="col-3 pl-0">
 						<a class="navbar-brand d-flex align-items-center" href="#">
-							<img src="/assets/images/Celebal-tech-logo.png" height="50" class="d-inline-block align-top"
+							<img src="{% static '/assets/images/Celebal-tech-logo.png' %}" height="50" class="d-inline-block align-top"
 								alt="logo-text" />
 						</a>
 					</div>
@@ -234,11 +238,11 @@
 		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
 	</script>
 	<script src="https://kit.fontawesome.com/7620f3fe52.js"></script> -->
-	<script src="./assets/js/jquery-3.4.1.min.js"></script>
-	<script src="./assets/js/popper.min.js"></script>
-	<script src= "./assets/js/bootstrap.min.js"></script>
-	<script src="./assets/js/fontawesome.js"></script>
-	<script src="./config.js"></script>
-	<script src="./assets/js/main.js"></script>
+	<script src={% static '/assets/js/jquery-3.4.1.min.js' %}"></script>
+	<script src={% static '/assets/js/popper.min.js' %}"></script>
+	<script src={% static '/assets/js/bootstrap.min.js' %}"></script>
+	<script src={% static '/assets/js/fontawesome.js' %}"></script>
+	<script src={% static '/config.js' %}"></script>
+	<script src={% static '/assets/js/main.js' %}"></script>
 
 </html>
