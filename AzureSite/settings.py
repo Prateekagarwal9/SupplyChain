@@ -62,7 +62,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'AzureSite.urls'
-STATIC_URL = '/SupplyChain/static/'
+STATIC_URL = '/home/site/wwwroot/SupplyChain/static/'
 
 
 TEMPLATES = [
