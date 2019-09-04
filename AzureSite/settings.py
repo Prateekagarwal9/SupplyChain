@@ -27,7 +27,7 @@ SECRET_KEY = 'y#ih54b62ue!ced=nfq%rfr1#f4l%8gd@7_9i16cgc&(z18o82'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['0.0.0.0','*']
 
 
 # Application definition
@@ -64,16 +64,12 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'AzureSite.urls'
-STATIC_URL = '/supplychain/static/'
-STATIC_ROOT = '/'
-MEDIA_URL = '/supplychain/assests/'
-MEDIA_ROOT = '/images/'
+
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates'), os.path.join(BASE_DIR, 'SupplyChain/static')]
-        ,
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -121,7 +117,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/
-
+STATIC_URL = '/SupplyChain/static/'
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
@@ -131,3 +127,11 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, '/SupplyChain/static'),
+)
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'SupplyChain/static')
+MEDIA_URL = os.path.join(BASE_DIR, 'media/')
+MEDIA_ROOT = MEDIA_DIR
